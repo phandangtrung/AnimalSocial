@@ -15,7 +15,7 @@ function Header() {
           <div className="search_logo">
             <FontAwesomeIcon icon={faSearch} />
           </div>
-          <input placeholder="Search" class="focus-visible-only" />
+          <input placeholder="Search" className="focus-visible-only" />
         </div>
         <div className="profile">
           <div className="create__button">

@@ -1,24 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import Groupimage from "../../mocks/images/dogimg.jpg";
 import "./style.scss";
-import Myavatar from "../../mocks/images/myavar.jpg";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faAddressBook,
-  faImage,
-  faNewspaper,
-  faUser,
-  faCog,
-} from "@fortawesome/free-solid-svg-icons";
+import Myavatar from "../../mocks/images/myavar.jpg";
+
+import { MenuItem, Default_Tab } from "./menu";
+
 function Rightbar() {
-  const [menucheck, setMenucheck] = useState([
-    { tab: "Home", status: false },
-    { tab: "People", status: false },
-    { tab: "Photos", status: false },
-    { tab: "News Feed", status: false },
-    { tab: "Profile", status: false },
-    { tab: "Settings", status: false },
-  ]);
+  const [tabsfocus, settabsfocus] = useState();
+  const { active_tab } = useParams();
+  const history = useHistory();
+  useEffect(() => {
+    console.log(active_tab);
+    if (!active_tab) {
+      history.push(Default_Tab);
+      settabsfocus(Default_Tab);
+    } else settabsfocus(`/${active_tab}`);
+  }, []);
+
+  const toogleTab = (route) => {
+    settabsfocus(route);
+    if (active_tab !== route) {
+      history.push(route);
+    }
+  };
   return (
     <div className="rightbar__container">
       <div className="infor_box">
@@ -32,85 +39,36 @@ function Rightbar() {
         </div>
       </div>
       <div className="menu">
-        <div className="menu__element">
-          <div className="menu__element_child ">
-            <div className="element__tab">
-              <div className="tab__icon">
-                <FontAwesomeIcon icon={faHome} />
+        {MenuItem.map((item) => (
+          <div
+            className={`menu__element${
+              tabsfocus === item.route ? "_active" : ""
+            }`}
+            key={item.tabname}
+            onClick={() => toogleTab(item.route)}
+          >
+            <div className="menu__element_child ">
+              <div className="element__tab">
+                <div className="tab__icon">{item.icon}</div>
+                <div className="tab__name">{item.tabname}</div>
               </div>
-              <div className="tab__name">Home</div>
-            </div>
-            <div className="element__nofi"></div>
-          </div>
-        </div>
-        <div className="menu__element">
-          <div className="menu__element_child ">
-            <div className="element__tab">
-              <div className="tab__icon">
-                <FontAwesomeIcon icon={faAddressBook} />
-              </div>
-              <div className="tab__name">People</div>
-            </div>
-            <div className="element__nofi">
-              <div className="nofi__number">
-                <div className="number">8</div>
-              </div>
+              <div className="element__nofi"></div>
             </div>
           </div>
+        ))}
+      </div>
+      <div className="invite_title">
+        invitions
+        <div className="invite_tag">
+          <div className="number">4</div>
         </div>
-        <div className="menu__element">
-          <div className="menu__element_child ">
-            <div className="element__tab">
-              <div className="tab__icon">
-                <FontAwesomeIcon icon={faImage} />
-              </div>
-              <div className="tab__name">Photos</div>
-            </div>
-            <div className="element__nofi"></div>
-          </div>
-        </div>
-        <div className="menu__element">
-          <div className="menu__element_child ">
-            <div className="element__tab">
-              <div className="tab__icon">
-                <FontAwesomeIcon icon={faNewspaper} />
-              </div>
-              <div className="tab__name">News Feed</div>
-            </div>
-            <div className="element__nofi"></div>
-          </div>
-        </div>
-        <div className="menu__element">
-          <div className="menu__element_child ">
-            <div className="element__tab">
-              <div className="tab__icon">
-                <FontAwesomeIcon icon={faUser} />
-              </div>
-              <div className="tab__name">Profile</div>
-            </div>
-            <div className="element__nofi"></div>
-          </div>
-        </div>
-        <div className="menu__element">
-          <div className="menu__element_child ">
-            <div className="element__tab">
-              <div className="tab__icon">
-                <FontAwesomeIcon icon={faCog} />
-              </div>
-              <div className="tab__name">Settings</div>
-            </div>
-            <div className="element__nofi"></div>
-          </div>
-        </div>
-        <div className="menu__element_active">
-          <div className="menu__element_child ">
-            <div className="element__tab">
-              <div className="tab__icon">
-                <FontAwesomeIcon icon={faCog} />
-              </div>
-              <div className="tab__name">Settings</div>
-            </div>
-            <div className="element__nofi"></div>
+      </div>
+      <div className="invite_box ">
+        <img src={Groupimage} />
+        <div className="accept_box">
+          <div className="accept__button">Accept Invitation</div>
+          <div className="cancle__button">
+            <FontAwesomeIcon icon={faTimes} />
           </div>
         </div>
       </div>

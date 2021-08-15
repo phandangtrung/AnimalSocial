@@ -4,13 +4,13 @@ $main-color: #ffff;
   width: 17vw;
   .infor_box {
     width: 15vw;
-    padding-left: 2vw;
     height: 80px;
     display: flex;
+    padding-left: 2vw;
     align-items: center;
     border-radius: 10px;
-    background-color: $main-color;
     margin-bottom: 20px;
+    background-color: $main-color;
     .my_avatar {
       width: 50px;
       height: 50px;
@@ -20,13 +20,13 @@ $main-color: #ffff;
     .user_infor {
       width: 100px;
       height: 50px;
-      padding-left: 10px;
       display: flex;
+      padding-left: 10px;
       flex-direction: column;
       justify-content: center;
       .my_name {
-        font-family: $font-main;
         font-weight: bold;
+        font-family: $font-main;
       }
       .my_tag {
         font-size: 15px;
@@ -36,12 +36,12 @@ $main-color: #ffff;
   }
   .menu {
     width: 17vw;
-    border-radius: 10px;
-    background-color: $main-color;
-    padding-top: 20px;
     display: flex;
-    flex-direction: column;
+    border-radius: 10px;
     align-items: center;
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+    background-color: $main-color;
     .menu__element {
       width: 17vw;
       height: 50px;
@@ -51,31 +51,29 @@ $main-color: #ffff;
         width: 12vw;
         height: 50px;
         display: flex;
-        border-bottom: 0.5px solid #f8f8fa;
         cursor: pointer;
+        border-bottom: 0.5px solid #f8f8fa;
         .element__tab {
           width: 8vw;
           height: 50px;
           display: flex;
-
           .tab__icon {
             width: 4vw;
             height: 50px;
-            color: #bec6d1;
-
             display: flex;
-            align-items: center;
+            color: #bec6d1;
             font-size: 1.2rem;
+            align-items: center;
           }
           .tab__name {
             width: 11vw;
             height: 50px;
-            color: #6b7c91;
-            font-weight: bold;
             display: flex;
-            align-items: center;
-            text-align: start;
+            color: #6b7c91;
             font-size: 1rem;
+            font-weight: bold;
+            text-align: start;
+            align-items: center;
             font-family: $font-main;
           }
         }
@@ -88,27 +86,26 @@ $main-color: #ffff;
           .nofi__number {
             width: 23px;
             height: 23px;
-            border-radius: 45%;
-            background-color: #1878f0;
             display: flex;
+            border-radius: 45%;
             align-items: center;
             justify-content: center;
+            background-color: #1878f0;
             .number {
               color: white;
-              font-family: $font-main;
               font-size: 12px;
+              font-family: $font-main;
             }
           }
         }
       }
     }
-
     .menu__element_active {
       @extend .menu__element;
+      background-color: #fcfbfc;
       border-left: 4px solid #1878f0;
       border-top: 0.5px solid #f8f8fa;
       border-bottom: 0.5px solid #f8f8fa;
-      background-color: #fcfbfc;
       .menu__element_child {
         .element__tab {
           .tab__icon {
@@ -118,6 +115,73 @@ $main-color: #ffff;
             color: #1878f0;
           }
         }
+      }
+    }
+  }
+  .invite_title {
+    text-transform: uppercase;
+    padding: 20px;
+    color: rgba(165, 164, 164, 0.884);
+    font-weight: bold;
+    font-family: $font-main;
+    display: flex;
+    justify-content: space-between;
+    .invite_tag {
+      width: 23px;
+      height: 23px;
+      display: flex;
+      border-radius: 45%;
+      align-items: center;
+      justify-content: center;
+      background-color: #1878f0;
+      .number {
+        color: white;
+        font-size: 12px;
+        font-family: $font-main;
+      }
+    }
+  }
+  .invite_box {
+    width: 13vw;
+    height: 250px;
+    padding: 1.5vw 2vw 1.5vw 2vw;
+    border-radius: 10px;
+    background-color: #ffff;
+    img {
+      width: 13vw;
+      height: 200px;
+      border-radius: 10px;
+      background-size: cover;
+    }
+    .accept_box {
+      width: 13vw;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      .accept__button {
+        display: flex;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        width: 9vw;
+        border-radius: 10px;
+        height: 35px;
+        background-color: #1878f0;
+        font-family: $font-main;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #ffff;
+      }
+      .cancle__button {
+        width: 2.2vw;
+        height: 35px;
+        cursor: pointer;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(65, 63, 63, 0.884);
+        border: 0.1px solid rgba(165, 164, 164, 0.884);
       }
     }
   }
