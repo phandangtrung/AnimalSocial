@@ -1,0 +1,124 @@
+$font-main: "Rubik", sans-serif;
+$main-color: #ffff;
+.rightbar__container {
+  width: 17vw;
+  .infor_box {
+    width: 15vw;
+    padding-left: 2vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $main-color;
+    margin-bottom: 20px;
+    .my_avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background-size: cover;
+    }
+    .user_infor {
+      width: 100px;
+      height: 50px;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .my_name {
+        font-family: $font-main;
+        font-weight: bold;
+      }
+      .my_tag {
+        font-size: 15px;
+        color: rgba(165, 164, 164, 0.884);
+      }
+    }
+  }
+  .menu {
+    width: 17vw;
+    border-radius: 10px;
+    background-color: $main-color;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .menu__element {
+      width: 17vw;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      .menu__element_child {
+        width: 12vw;
+        height: 50px;
+        display: flex;
+        border-bottom: 0.5px solid #f8f8fa;
+        cursor: pointer;
+        .element__tab {
+          width: 8vw;
+          height: 50px;
+          display: flex;
+
+          .tab__icon {
+            width: 4vw;
+            height: 50px;
+            color: #bec6d1;
+
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+          }
+          .tab__name {
+            width: 11vw;
+            height: 50px;
+            color: #6b7c91;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            text-align: start;
+            font-size: 1rem;
+            font-family: $font-main;
+          }
+        }
+        .element__nofi {
+          width: 10vw;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .nofi__number {
+            width: 23px;
+            height: 23px;
+            border-radius: 45%;
+            background-color: #1878f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .number {
+              color: white;
+              font-family: $font-main;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .menu__element_active {
+      @extend .menu__element;
+      border-left: 4px solid #1878f0;
+      border-top: 0.5px solid #f8f8fa;
+      border-bottom: 0.5px solid #f8f8fa;
+      background-color: #fcfbfc;
+      .menu__element_child {
+        .element__tab {
+          .tab__icon {
+            color: #1878f0;
+          }
+          .tab__name {
+            color: #1878f0;
+          }
+        }
+      }
+    }
+  }
+}

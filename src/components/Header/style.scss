@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+$font-logo: "Lobster", sans-serif;
+$font-main: "Rubik", sans-serif;
+.header__md {
+  width: 96vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fdfdfd;
+  padding: 0px 2vw 0px 2vw;
+  .logo__sc {
+    width: 20vw;
+    height: 80px;
+    display: flex;
+    .logo {
+      width: 5vw;
+      height: 80px;
+      background-image: url("../../mocks//images//petlogo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 1.3vw;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #3d5473;
+      font-family: $font-logo;
+    }
+  }
+  .search_profile {
+    width: 40vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    .search_bar {
+      width: 25vw;
+      height: 50px;
+      background-color: #f4f6fa;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      .search_logo {
+        color: #cdd1d9;
+        width: 2vw;
+        text-align: center;
+      }
+      input {
+        background-color: #f4f6fa;
+        border: 0px;
+        height: 30px;
+        width: 22vw;
+        border-width: 0px;
+        color: #888a8d;
+      }
+      input::placeholder {
+        color: #cdd1d9;
+      }
+      .focus-visible-only:focus-visible {
+        outline: 0px;
+      }
+    }
+    .profile {
+      width: 13vw;
+      height: 50px;
+      padding-left: 1vw;
+      display: flex;
+      justify-content: space-between;
+      .create__button {
+        height: 50px;
+        width: 5vw;
+        padding: 0px 20px 0px 20px;
+        border-radius: 13px;
+        background-color: #1778f2;
+        display: flex;
+        align-items: center;
+        color: #ffff;
+        font-family: $font-main;
+        cursor: pointer;
+        .icon {
+          margin-right: 10px;
+        }
+      }
+      .myavarta {
+        width: 3.8vw;
+        background-color: red;
+        height: 50px;
+        border-radius: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1026px) {
+  .header__md {
+    .logo__sc {
+      width: 220vw;
+      .logo {
+        width: 9vw;
+      }
+      .title {
+        font-size: 1.3rem;
+      }
+    }
+    .search_profile {
+      .search_bar {
+        padding-left: 13px;
+        align-items: center;
+        width: 7vw;
+        height: 10vw;
+        border-radius: 50%;
+        .search_logo {
+          padding-left: 0px;
+        }
+        input {
+          display: none;
+        }
+      }
+      .profile {
+        display: none;
+      }
+    }
+  }
+}
