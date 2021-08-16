@@ -6,6 +6,8 @@ $font-main: "Rubik", sans-serif;
   width: 96vw;
   height: 80px;
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   background-color: #fdfdfd;
   padding: 0px 2vw 0px 2vw;

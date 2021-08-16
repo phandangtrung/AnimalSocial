@@ -1,8 +1,13 @@
 $font-main: "Rubik", sans-serif;
 $main-color: #ffff;
 .leftbar__container {
-  width: 15vw;
+  width: 16.5vw;
   float: left;
+  position: fixed;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 90vh;
+  top: 100px;
   .infor_box {
     width: 13vw;
     height: 80px;
@@ -121,6 +126,7 @@ $main-color: #ffff;
   }
   .invite_title {
     text-transform: uppercase;
+    width: 12vw;
     padding: 20px;
     color: rgba(165, 164, 164, 0.884);
     font-weight: bold;
@@ -147,6 +153,7 @@ $main-color: #ffff;
     height: 250px;
     padding: 1.5vw 1.2vw 1.5vw 1.2vw;
     border-radius: 10px;
+    margin-bottom: 20px;
     background-color: #ffff;
     .img_box {
       position: relative;
@@ -214,4 +221,29 @@ $main-color: #ffff;
       }
     }
   }
+  transition: all 0.8s;
+}
+.leftbar__container:hover {
+  overflow-y: scroll;
+}
+.leftbar__container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+.leftbar__container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(255, 246, 246, 0.1);
+  border: 1px solid #ccc;
+}
+
+.leftbar__container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #fff, #e4e4e4);
+  border: 1px solid #aaa;
+}
+.leftbar__container::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.leftbar__container::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(left, #22add4, #1e98ba);
 }

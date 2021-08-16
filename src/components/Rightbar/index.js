@@ -1,7 +1,10 @@
 import React from "react";
 import "./style.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
+
 import Ravatar from "../../mocks/images/myavar.jpg";
-import { Requestdata } from "../../mocks/data/request_data";
+import { Requestdata, Contactsdata } from "../../mocks/data/request_data";
 function Rightbar() {
   return (
     <div className="rightbar__container">
@@ -28,6 +31,25 @@ function Rightbar() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="contacts_container">
+        <div className="contacts_title">
+          contacts
+          <div className="contacts_tag">
+            <div className="number">68</div>
+          </div>
+        </div>
+        <div className="contacts_box">
+          {Contactsdata.map((contact) => (
+            <div className="contacts_element">
+              <img className="element_avatar" src={contact.img} />
+              <div className="element_name">{contact.name}</div>
+              <div className="element_tools">
+                <FontAwesomeIcon icon={faEllipsisH} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

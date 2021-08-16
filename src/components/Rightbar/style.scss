@@ -3,7 +3,12 @@ $main-color: #ffff;
 
 .rightbar__container {
   width: 17vw;
+  position: fixed;
   float: right;
+  height: 90vh;
+  top: 100px;
+  right: 20px;
+  overflow: hidden;
   .requests_container {
     width: 17vw;
     .requests_title {
@@ -36,7 +41,6 @@ $main-color: #ffff;
       height: 100px;
       border-radius: 10px;
       padding: 20px;
-      padding-top: 10px;
       margin-bottom: 20px;
 
       .request_profile {
@@ -106,4 +110,76 @@ $main-color: #ffff;
       }
     }
   }
+  .contacts_container {
+    @extend .requests_container;
+    .contacts_title {
+      @extend .requests_title;
+      .contacts_tag {
+        @extend .requests_tag;
+        width: 30px;
+        background-color: rgba(165, 164, 164, 0.884);
+        .number {
+          @extend .number;
+        }
+      }
+    }
+    .contacts_box {
+      @extend .requests_box;
+      height: auto;
+      .contacts_element {
+        width: 14vw;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        .element_avatar {
+          width: 45px;
+          height: 40px;
+          border-radius: 10px;
+          background-size: cover;
+        }
+        .element_name {
+          width: 125px;
+          display: flex;
+          align-items: center;
+          color: rgb(85, 84, 84);
+          // margin-left: 10px;
+          font-size: 0.9rem;
+          font-weight: bold;
+          font-family: $font-main;
+        }
+        .element_tools {
+          color: rgb(177, 173, 173);
+          height: 40px;
+          display: flex;
+          align-items: center;
+          font-size: 0.9rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.rightbar__container:hover {
+  overflow-y: scroll;
+}
+.rightbar__container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+.rightbar__container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(255, 246, 246, 0.1);
+  border: 1px solid #ccc;
+}
+
+.rightbar__container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #fff, #e4e4e4);
+  border: 1px solid #aaa;
+}
+.rightbar__container::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+.rightbar__container::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(left, #22add4, #1e98ba);
 }
