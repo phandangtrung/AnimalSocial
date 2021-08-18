@@ -38,3 +38,30 @@ export const Contactsdata = [
     img: "https://www.elleman.vn/wp-content/uploads/2019/10/29/sinh-nhat-tim-cook-5.jpg",
   },
 ];
+
+export const Storydata = [
+  {
+    id: 1,
+    name: "Sam Brown",
+    img: "https://i.pinimg.com/564x/21/b3/9e/21b39e704a5a69405923463049c1950c.jpg",
+    pimg: "https://i.pinimg.com/564x/40/c1/d8/40c1d8caa349faa3aa1c65f5916f146c.jpg",
+  },
+  {
+    id: 2,
+    name: "Laura Fisher",
+    img: "https://i.pinimg.com/564x/ac/31/52/ac3152a6b65b47efdc12e8192b6bcdb0.jpg",
+    pimg: "https://i.pinimg.com/564x/10/32/6a/10326a8a27941449babe965e60cc388c.jpg",
+  },
+  {
+    id: 3,
+    name: "Diana Voss",
+    img: "https://i.pinimg.com/564x/ff/72/2c/ff722cb5c4746841a67fd6501817e9da.jpg",
+    pimg: "https://i.pinimg.com/564x/aa/4d/01/aa4d0125c933f827aea01a300a52d8d9.jpg",
+  },
+  {
+    id: 4,
+    name: "Roger Miller",
+    img: "https://i.pinimg.com/564x/58/5a/81/585a81d33ec34869cf4cd52dea2f1a60.jpg",
+    pimg: "https://i.pinimg.com/564x/4b/26/1c/4b261ca021c17292b4b68515074330e9.jpg",
+  },
+];

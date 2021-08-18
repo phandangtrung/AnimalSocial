@@ -2,15 +2,15 @@ $font-main: "Rubik", sans-serif;
 $main-color: #ffff;
 
 .rightbar__container {
-  width: 17vw;
+  width: 20vw;
   position: fixed;
   float: right;
   height: 90vh;
   top: 100px;
-  right: 20px;
+  right: 10px;
   overflow: hidden;
   .requests_container {
-    width: 17vw;
+    width: 20vw;
     .requests_title {
       text-transform: uppercase;
       padding: 20px;
@@ -36,7 +36,7 @@ $main-color: #ffff;
       }
     }
     .requests_box {
-      width: 14vw;
+      width: 16.5vw;
       background-color: $main-color;
       height: 100px;
       border-radius: 10px;
@@ -44,7 +44,7 @@ $main-color: #ffff;
       margin-bottom: 20px;
 
       .request_profile {
-        width: 15.5vw;
+        width: 16.5vw;
         display: flex;
         .profile_avatar {
           width: 50px;
@@ -67,7 +67,7 @@ $main-color: #ffff;
       }
       .button_box {
         display: flex;
-        width: 14vw;
+        width: 16vw;
         justify-content: space-between;
         margin-top: 20px;
         .accept_button {
@@ -127,7 +127,7 @@ $main-color: #ffff;
       @extend .requests_box;
       height: auto;
       .contacts_element {
-        width: 14vw;
+        width: 16vw;
         display: flex;
         justify-content: space-around;
         margin-bottom: 20px;

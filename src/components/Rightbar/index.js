@@ -16,7 +16,7 @@ function Rightbar() {
           </div>
         </div>
         {Requestdata.map((request) => (
-          <div className="requests_box">
+          <div key={request.id} className="requests_box">
             <div className="request_profile">
               <img className="profile_avatar" src={`${request.img}`} />
               <div className="profile_title">
@@ -41,7 +41,7 @@ function Rightbar() {
         </div>
         <div className="contacts_box">
           {Contactsdata.map((contact) => (
-            <div className="contacts_element">
+            <div key={contact.id} className="contacts_element">
               <img className="element_avatar" src={contact.img} />
               <div className="element_name">{contact.name}</div>
               <div className="element_tools">

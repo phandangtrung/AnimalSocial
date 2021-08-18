@@ -1,15 +1,16 @@
 $font-main: "Rubik", sans-serif;
 $main-color: #ffff;
 .leftbar__container {
-  width: 16.5vw;
+  width: 20vw;
   float: left;
   position: fixed;
   overflow-y: hidden;
   overflow-x: hidden;
   height: 90vh;
   top: 100px;
+  left: 10px;
   .infor_box {
-    width: 13vw;
+    width: 17vw;
     height: 80px;
     display: flex;
     padding-left: 2vw;
@@ -41,7 +42,7 @@ $main-color: #ffff;
     }
   }
   .menu {
-    width: 15vw;
+    width: 19vw;
     display: flex;
     border-radius: 10px;
     align-items: center;
@@ -49,12 +50,12 @@ $main-color: #ffff;
     padding: 20px 0px 20px 0px;
     background-color: $main-color;
     .menu__element {
-      width: 15vw;
+      width: 18.7vw;
       height: 50px;
       display: flex;
       justify-content: center;
       .menu__element_child {
-        width: 12vw;
+        width: 15vw;
         height: 50px;
         display: flex;
         cursor: pointer;
@@ -126,7 +127,7 @@ $main-color: #ffff;
   }
   .invite_title {
     text-transform: uppercase;
-    width: 12vw;
+    width: 17.5vw;
     padding: 20px;
     color: rgba(165, 164, 164, 0.884);
     font-weight: bold;
@@ -149,8 +150,8 @@ $main-color: #ffff;
     }
   }
   .invite_box {
-    width: 13vw;
-    height: 250px;
+    width: 17vw;
+    height: auto;
     padding: 1.5vw 1.2vw 1.5vw 1.2vw;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -159,8 +160,8 @@ $main-color: #ffff;
       position: relative;
 
       .img_groupcover {
-        width: 13vw;
-        height: 200px;
+        width: 17vw;
+        height: auto;
         border-radius: 10px;
         background-size: cover;
       }
@@ -175,7 +176,7 @@ $main-color: #ffff;
         z-index: 1;
       }
       .group_title {
-        width: 10vw;
+        width: 20vw;
         position: absolute;
         color: #ffff;
         bottom: 20px;
@@ -190,7 +191,7 @@ $main-color: #ffff;
 
     .accept_box {
       float: inline-end;
-      width: 13vw;
+      width: 17vw;
       padding-top: 10px;
       display: flex;
       justify-content: space-between;
@@ -199,9 +200,9 @@ $main-color: #ffff;
         cursor: pointer;
         justify-content: center;
         align-items: center;
-        width: 9vw;
+        width: 13vw;
         border-radius: 10px;
-        height: 35px;
+        height: 40px;
         background-color: #1878f0;
         font-family: $font-main;
         font-size: 0.8rem;
@@ -209,8 +210,8 @@ $main-color: #ffff;
         color: #ffff;
       }
       .cancle__button {
-        width: 2.2vw;
-        height: 35px;
+        width: 2.7vw;
+        height: 40px;
         cursor: pointer;
         border-radius: 10px;
         display: flex;
